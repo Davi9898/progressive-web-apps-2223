@@ -1,0 +1,442 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: rgb(70, 65, 65);
+  --text-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+input::placeholder {
+  color: black;
+}
+
+main h2 {
+  margin-left: 0.5rem;
+}
+
+ul {
+  isolation: isolate;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+ul li {
+  list-style-type: none;
+  width: 300px;
+  height: 300px;
+  margin: 4rem 1rem 0rem 1rem;
+  position: relative;
+  isolation: isolate;
+  
+}
+
+ul li:last-of-type {
+    margin-bottom: 4rem;
+}
+
+ul li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -1rem 0 0 -1rem;
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #2ea44f;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  z-index: -1;
+}
+
+section:nth-of-type(1) {
+  position: relative;
+}
+
+section:nth-of-type(1) > h2 {
+  position: absolute;
+}
+
+h3 {
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  color: white;
+  padding: 1rem 1.25rem;
+}
+
+.my-class {
+  color: white;
+  opacity: 1;
+}
+
+.schaduweffect {
+  filter: brightness(20%);
+}
+
+li {
+  transition: 0.3s ease;
+}
+
+li img {
+  transition: 0.3s ease;
+  border-radius: .5em;
+}
+
+li:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+li img:hover {
+  transition: 0.3s ease;
+}
+
+/* !!!!!!!!!!! Header !!!!!!!!! */
+
+header {
+  padding: 0 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+header h2 {
+  text-align: center;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Bron https://blog.maximerouiller.com/post/remove-the-x-from-internet-explorer-and-chrome-input-type-search/ */
+
+header img {
+  width: 30%;
+  height: 100%;
+  padding-bottom: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+  header img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section:nth-of-type(3) > img {
+    display: none;
+  }
+}
+
+header input {
+  position: relative;
+  width: 35%;
+  height: 3em;
+  /* border-radius: .5em; */
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px;
+  margin-top: 1em;
+  transition: 0.3s ease;
+  font-size: 1em;
+  padding-left: 1em;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  header input {
+    width: 60%;
+  }
+}
+
+header input:hover {
+  border-radius: 1em;
+  transition: 0.3s ease;
+  background-color:#f7f7f7;
+}
+
+header input::placeholder {
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+  color: black;
+  font-weight: 300;
+}
+
+/* !!!!!!!!!! DETAIL PAGINA !!!!!!!!!! */
+
+.details {
+  isolation: isolate;
+  position: fixed;
+  inset: 0;
+  background: black;
+  height: 100%;
+  overflow-y: auto;
+  max-height: 100vh;
+  transition: 0.5s ease;
+}
+
+.details::-webkit-scrollbar {
+  display: none;
+}
+
+.details.hidden {
+  transform: translateX(-100vw);
+}
+
+/*!!!!!!! LOADING STATE !!!!!!!!! */
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #9c41f2;
+  border-radius: 50%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+}
+#loading.display {
+  visibility: visible;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* BRON : https://dev.to/vaishnavs/displaying-loading-animation-on-fetch-api-calls-1e5m */
+
+/* !!!!!! STYLING van de Div Modal !!!!!!!!!!!! */
+
+section:nth-of-type(3) > img:nth-of-type(1) {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* !!! Terug button !!! */
+button {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 12px 40px;
+  margin: 1rem;
+  position: relative;
+  text-align: center;
+}
+
+button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: #2c974b;
+}
+
+button:focus {
+  box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+
+/* BRON : https://getcssscan.com/css-buttons-examples */
+
+/* !!! Detail modal !!! */
+
+section:nth-of-type(3) > img {
+  margin-top: 1em;
+}
+
+section > article::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin: -1rem 0 0 -1rem;
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #2ea44f;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  z-index: -1;
+}
+
+.details {
+  isolation: isolate;
+  position: fixed;
+  inset: 0;
+  background: black;
+  height: 100%;
+  overflow-y: auto;
+  max-height: 100vh;
+  transition: 0.5s ease;
+}
+
+.details::-webkit-scrollbar {
+  display: none;
+}
+
+.details.hidden {
+  transform: translateX(-100vw);
+}
+
+main section:nth-of-type(3) {
+  height: 100%;
+}
+
+section:nth-of-type(3) article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section:nth-of-type(3) article h2 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+section:nth-of-type(3) article p {
+  margin: 0 40px 20px 40px;
+  font-weight: 300;
+  line-height: 1.6rem;
+  font-size: 1.3rem;
+}
+
+section:nth-of-type(3) article img {
+  margin: 2rem 0 2rem 0;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  section:nth-of-type(3) article img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  section:nth-of-type(3) article img {
+    width: 30%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section:nth-of-type(3) article img {
+    width: 70%;
+    height: auto;
+  }
+}
+
+/* !!!!! EMPTY STATE !!!!!! */
+
+section:nth-of-type(4) > p {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* !!!!!!!!!! ERROR STATE !!!!!!!!!! */
+
+section:nth-of-type(2) > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(255, 74, 74);
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+<a href="/">&lt; Terug</a>
+
+<h1>DETAIL</h1>
+
+Title: {{ kunstObject.artObject.title }}
+<img src="{{ kunstObject.artObject.webImage.url }}" alt="" style="max-width: 100%;">
+{{ kunstObject.artObject.description }}
+
+<ul>
+{{#each kunstObject.artObject.objectTypes}}
+    <li>{{ this }}</li>
+{{/each}}
+</ul>

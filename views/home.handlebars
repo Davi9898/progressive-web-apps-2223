@@ -1,0 +1,15 @@
+<div class="kunstobjecten-lijst">
+
+  {{#each kunstObjectenLijst}}
+
+    <div class="kunstobject">
+      <h3>{{this.title}}</h3>
+      <div class="kunstobject__image">
+        <img src="{{ this.headerImage.url }}" alt="">
+      </div>
+      <a href="/kunstobject/{{ this.objectNumber}}">Bekijk meer</a>
+    </div>
+
+  {{/each}}
+
+</div>

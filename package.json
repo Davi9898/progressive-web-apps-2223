@@ -1,0 +1,29 @@
+{
+  "name": "progressive-web-apps-2223",
+  "version": "1.0.0",
+  "description": "![pwa](https://user-images.githubusercontent.com/3104648/28351989-7f68389e-6c4b-11e7-9bf2-e9fcd4977e7a.png)",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davi9898/progressive-web-apps-2223.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davi9898/progressive-web-apps-2223/issues"
+  },
+  "homepage": "https://github.com/Davi9898/progressive-web-apps-2223#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.2",
+    "node-fetch": "^3.3.1"
+  }
+}
