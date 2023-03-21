@@ -3,7 +3,7 @@ import { engine } from 'express-handlebars';
 import { fetchRijksApiList } from './functions/fetchRijksApiList.js';
 import { fetchRijksApiObject } from './functions/fetchRijksApiObject.js';
 
-
+const compression = require('compression')
 const app = express();
 const port = 3000;
 
@@ -14,10 +14,8 @@ app.set('views', './views');
 // app.get('/kunstobject', (req, res) => {
 //     res.render('detail');
 // })
-
-
-
-
+app.use(compression())
+app.use(express.static('public'));
 app.get('/kunstobject/:objectId', (req, res) => {
 
     fetchRijksApiObject(req.params.objectId).then((data) => {

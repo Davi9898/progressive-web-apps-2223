@@ -1,15 +1,26 @@
-<div class="kunstobjecten-lijst">
+ <header>
+      <img src="/images/headerimg.png" />
+      <h2>Voor al uw rijksmuseum kunstobjecten</h2>
+      <form action="/" method="GET">
+       <input placeholder="Typ om te zoeken" type="search" minlength="3" required onkeyup="zoekText()">
+
+        <button type="submit">Zoeken</button>
+      </form>
+  </header>
+
+<ul class="kunstobjecten-lijst">
 
   {{#each kunstObjectenLijst}}
 
-    <div class="kunstobject">
+    <li class="kunstobject">
       <h3>{{this.title}}</h3>
-      <div class="kunstobject__image">
-        <img src="{{ this.headerImage.url }}" alt="">
-      </div>
-      <a href="/kunstobject/{{ this.objectNumber}}">Bekijk meer</a>
-    </div>
+      <a href="/kunstobject/{{ this.objectNumber}}">
+        <div href="/kunstobject/{{ this.objectNumber}}" class="kunstobject__image">
+          <img src="{{ this.webImage.url }}" alt="">
+        </div>
+      </a>
+    </li>
 
   {{/each}}
 
-</div>
+</ul>
