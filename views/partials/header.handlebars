@@ -1,9 +1,11 @@
 <header>
+      <a href="/">
       <img src="/images/headerimg.png" />
+      </a>
       <h2>Voor al uw rijksmuseum kunstobjecten</h2>
-      <form action="/" method="GET">
-       <input placeholder="Typ om te zoeken" type="search" minlength="3" required onkeyup="zoekText()">
+      <form action="/search">
+       <input placeholder="Typ om te zoeken" type="search" minlength="3" name="search" required >
 
-        <button type="submit">Zoeken</button>
+        <button type="submit">Search</button>
       </form>
 </header>
