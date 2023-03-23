@@ -15,7 +15,7 @@ app.set('views', './views');
 app.use(compression())
 
 // Serving files
-app.use(express.static('public'));
+app.use(express.static('dist'));
 
 // Detail route 
 app.get('/kunstobject/:objectId', (req, res) => {

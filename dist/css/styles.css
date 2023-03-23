@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  ul li img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+  
+  ul li {
+    list-style-type: none;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 1em;
+    
+  }
+
+  li h3  {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    color: black;
+  }
+
+  header {
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  
+  header h2 {
+    text-align: center;
+  }
+
+  /* !! Loading State !! */
+
+  ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1rem 0 0 -1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #2ea44f;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+    z-index: -1;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* !! Header !! */
+
+  header img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1em;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    header img {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    section:nth-of-type(3) > img {
+      display: none;
+    }
+  }
+  
+  header input {
+    position: relative;
+    width: 100%;
+    height: 3em;
+    border-radius: 5px 0px 0px 5px;
+    margin-top: 1em;
+    transition: 0.3s ease;
+    font-size: 1em;
+    padding-left: 1em;
+    font-weight: 600;
+  }
+  
+  @media screen and (max-width: 768px) {
+    header input {
+      width: 60%;
+    }
+  }
+  
+  header input:hover { 
+    transition: 0.3s ease;
+    background-color:#a19797;
+  }
+  
+  header input::-moz-placeholder {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 15%;
+    left: 3%;
+    color: black;
+    font-weight: 300;
+  }
+  
+  header input::placeholder {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 15%;
+    left: 3%;
+    color: black;
+    font-weight: 300;
+  }
+
+  form {
+    display: flex;
+  }
+
+  header button {
+    height: 3.5em;
+    margin-top: 1.3em;
+    position: relative;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  header button:hover {
+    cursor: pointer;
+  }
+
+input{
+    outline: none;
+}
