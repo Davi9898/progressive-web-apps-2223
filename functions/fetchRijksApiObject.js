@@ -16,7 +16,7 @@ return fetch(url)
         return response.json();
     })
     .then(data => {
-        console.log(data)
+        // console.log(data)
         //data.artObjects.length <= 1
         // Images filteren die een image hebben en map roept het createListItem aan 
         return data;

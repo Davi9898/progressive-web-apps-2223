@@ -32,7 +32,7 @@ mix.webpackConfig({
 
 mix.after((stats) => {
   //Bug in laravel-mix-copy-watched made me change to this solution
-  fs.copy("./src/static", "./dist", () => {});
+  fs.copy("./src/static",  "./dist", () => {});
 });
 
 //Browsersync triggers on every file change in ./src
