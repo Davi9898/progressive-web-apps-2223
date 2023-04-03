@@ -1,4 +1,6 @@
 {{> header}}
+
+{{#if kunstObjectenLijst.length}}
 <ul class="kunstobjecten-lijst">
 
   {{#each kunstObjectenLijst}}
@@ -13,5 +15,11 @@
     </li>
 
   {{/each}}
+
+  {{else}}
+  <p>No results found</p>
+  {{/if}}
+
+  
 
 </ul>

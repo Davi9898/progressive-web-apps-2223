@@ -7,8 +7,10 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(70, 65, 65);
     color: white;
+    font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -99,17 +101,8 @@ ul {
     padding-bottom: 1em;
   }
   
-  @media screen and (max-width: 1200px) {
-    header img {
-      width: 50%;
-    }
-  }
   
-  @media screen and (max-width: 768px) {
-    section:nth-of-type(3) > img {
-      display: none;
-    }
-  }
+ 
   
   header input {
     position: relative;
@@ -164,3 +157,111 @@ ul {
 input{
     outline: none;
 }
+
+/* !!! Terug button !!! */
+
+
+/* BRON : https://getcssscan.com/css-buttons-examples */
+
+.details a {
+  padding: 10px 20px ;
+  background-color: #2ea44f;
+  color: white;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  left: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  top: 1em;
+}
+
+.details > img {
+  margin-top: 1em;
+}
+
+.details > article::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin: -1rem 0 0 -1rem;
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #2ea44f;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  z-index: -1;
+}
+
+.details img {
+  width: 50%;
+  height: 10%;
+  object-fit: cover;
+}
+
+.details::-webkit-scrollbar {
+  display: none;
+}
+
+
+.details {
+  height: 100%;
+}
+
+.details article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details article h2 {
+  margin-top: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.details article p {
+  margin: 0 40px 20px 40px;
+  font-weight: 300;
+  line-height: 1.6rem;
+  font-size: 1.3rem;
+}
+
+.details article img {
+  margin: 2rem 0 2rem 0;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .details article img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .details article img {
+    width: 30%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .details article img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.details article img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+

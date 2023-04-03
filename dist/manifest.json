@@ -9,7 +9,7 @@
   "icons": [
       {
           "src": "./images/icons/museumicon.jpg",
-          "sizes": "512x512",
+          "sizes": "820x820",
           "type": "image/png"
       }
   ]

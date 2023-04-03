@@ -1,3 +1,4 @@
+// Importeren van de Packages die nodig zijn
 const fs = require("fs-extra");
 const mix = require("laravel-mix");
 const WatchExternalFilesPlugin = require("webpack-watch-external-files-plugin");
@@ -17,6 +18,7 @@ removeFolders.forEach((folder) => {
 //Add more entries as needed
 mix.css("./src/css/styles.css", "dist/css");
 mix.js("./src/js/script.js", "dist/js");
+mix.js("./src/service-worker.js", "dist/");
 
 //--
 

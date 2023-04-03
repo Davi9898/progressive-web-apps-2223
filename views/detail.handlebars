@@ -1,14 +1,16 @@
-<a href="/">&lt; Terug</a>
+<section class="details">
+  <a href="/">&lt; Terug</a>
 
-<h1>DETAIL</h1>
 
-
-Title: {{ kunstObject.artObject.title }}
-<img src="{{ kunstObject.artObject.webImage.url }}" alt= "{{ kunstObject.artObject.title }}">
-<p>{{ kunstObject.artObject.description }}</p> 
-
-<ul>
-{{#each kunstObject.artObject.objectTypes}}
-    <li>{{ this }}</li>
-{{/each}}
-</ul>
+<article>
+  <h2>
+  {{kunstObject.artObject.title}}
+  </h2>
+  <img
+    src="{{kunstObject.artObject.webImage.url}}"
+    alt="{{kunstObject.artObject.title}}"
+  />
+  <p>{{kunstObject.artObject.description}}</p>
+</article>
+  
+</section>
