@@ -1,8 +1,3 @@
-// webpack.mix.js
-// import fs from "fs-extra";
-// import mix from "laravel-mix";
-// import WatchExternalFilesPlugin from "webpack-watch-external-files-plugin";
-
 const fs = require("fs-extra");
 const mix = require("laravel-mix");
 const WatchExternalFilesPlugin = require("webpack-watch-external-files-plugin");
@@ -35,10 +30,3 @@ mix.after((stats) => {
   fs.copy("./src/static",  "./dist", () => {});
 });
 
-//Browsersync triggers on every file change in ./src
-// mix.browserSync({
-//   server: {
-//     baseDir: "dist",
-//   },
-//   files: ["./src/**/*"],
-// });

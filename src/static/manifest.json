@@ -1,16 +1,16 @@
 {
-    "name": "Kunstzoeker",
-    "short_name": "Kunstzoeker",
-    "icons": [
-        {
-          "src": "/img/iconapp.png",
-          "type": "image/png",
-          "sizes": "512x512"
-        }
-      ],
-    "theme_color": "#7a6b18",
-    "background_color": "#7a6107",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/"
-  }
+  "name": "Kunstzoeker",
+  "short_name": "Kunstzoeker",
+  "theme_color": "#40474F",
+  "background_color": "#40474F",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+      {
+          "src": "./images/icons/museumicon.jpg",
+          "sizes": "820x820",
+          "type": "image/png"
+      }
+  ]
+}
