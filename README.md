@@ -42,11 +42,66 @@ In het algemeen is SSR beter voor de prestaties van FCP en LCP, omdat het de laa
 
 <!-- ...and an activity diagram including the Service Worker 📈 -->
 ## Activity Diagram
-
-![Frame 4 (3)](https://user-images.githubusercontent.com/76910947/229811832-990ab857-df23-413c-b1c6-41447de7d74c.png)
+![Frame 4 (4)](https://user-images.githubusercontent.com/76910947/229812131-855d2775-3635-4aa3-946c-2a1d9826f2bb.png)
 
 
 <!-- This would be a good place for a list of enhancements to optimize the critical render path implemented your app  -->
+## Critical Rendering Path
+
+### Compression
+De npm package 'compression' is een package voor het comprimeren van HTTP responses in Node.js. Het kan worden gebruikt als middleware in Express.js en andere Node.js frameworks om de grootte van de HTTP response te verminderen en de laadtijd van webpagina's te verkorten.
+```js
+app.use(compression())
+```
+Je zou eventueel nog filters kunnen toevoegen maar dat is niet nodig.
+
+### Minify doormiddel van Webpack/laravel Mix
+Minificatie is het proces van kleiner maken van code zodat deze sneller en efficiënter kunnen worden geladen. Ik richt het op CSS / JavaScript / Serviceworker. De webapplicatie kan dus sneller geladen worden en betere prestaties leveren.
+
+```js
+// File system methods extra
+const fs = require("fs-extra");
+// Build tool dat het proces van compilen versimpelt
+const mix = require("laravel-mix");
+// plugin voor webpack zorgt dat er gewatched kan worden naar files buiten het main build process
+const WatchExternalFilesPlugin = require("webpack-watch-external-files-plugin");
+
+// Output directory voor het build process
+mix.setPublicPath("./dist");
+// Configuring het build process en geen manifest te genereren
+mix.options({ manifest: false });
+
+//Clean up the dist folder
+let removeFolders = ["/dist/"];
+
+// Loop door de array om de folders te verwijderen. 
+// rmSync is een method van fs-extra om files en folder synchroon te verwijderen
+// process.cwd returned the huidige werkende directory welke gebruikt wordt om het path naar de folder te deleten
+removeFolders.forEach((folder) => {
+  fs.rmSync(process.cwd() + folder, { recursive: true, force: true });
+});
+
+//---
+
+//Add more entries as needed
+mix.css("./src/css/styles.css", "dist/css");
+mix.js("./src/js/script.js", "dist/js");
+mix.js("./src/service-worker.js", "dist/");
+
+//--
+
+//Trigger compile on every file change so they get copied from ./src to ./dist
+mix.webpackConfig({
+  plugins: [new WatchExternalFilesPlugin({ files: ["./src/**/*"] })],
+});
+
+//Call back functie om executed te worden nadat het build process complete
+// fs-extra wordt gebruikt om alles files te copyen naar de output directory
+mix.after((stats) => {
+  //Bug in laravel-mix-copy-watched made me change to this solution
+  fs.copy("./src/static",  "./dist", () => {});
+});
+```
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
