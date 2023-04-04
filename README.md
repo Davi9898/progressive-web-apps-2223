@@ -109,6 +109,7 @@ npm run prod
 * https://blog.cloudflare.com/client-side-vs-server-side-rendering-why-its-not-all-black-and-white/
 * https://web.dev/lcp/"
 * https://web.dev/first-contentful-paint/
+* https://laravel-mix.com/
 
 <!-- How about a section that describes how to install this project? 🤓 -->
 ## How to install
