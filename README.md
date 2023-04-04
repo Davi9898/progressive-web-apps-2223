@@ -10,24 +10,15 @@ https://progressive-web-apps-2223-davi9898.onrender.com/kunstobject/SK-C-251
 
 # Table of contents
 1. [Omschrijving](#introduction)
-2. [Features](#paragraph1)
-    1. [Github Pages](#subparagraph1)
-3. [Install](#paragraph2)
-    1. [Sections](#subparagraph2)
-4. [Activity Diagram](#paragraph3)
-5. [Logbook](#paragraph4)
-    1. [Week 1](#week1)
-    2. [Week 2](#week2)
-    3. [Week 3](#week3)
-    4. [Week 4](#week4)
-6. [Functions](#paragraph5)
-7. [Checklist](#paragraph6)
+2. [Client side vs Server side](#paragraph1)
+3. [Activity Diagram](#paragraph2)
+4. [Critical Rendering Path](#paragraph3)
 
 <!-- ☝️ replace this description with a description of your own work -->
 ## Omschrijving <a name="introduction"></a>
 De kunstzoeker is een progressive web app waarin er gezocht kan worden naar verschillende kunstobjecten doormiddel van een search query. Ook kan er worden geklikt op een kunstobject zodat er een detail pagina te voor weergegeven wordt. Hier kan de gebruiker meer informatie over het kunstobject op doen. Ook worden er core_assets opgeslagen in de cache zodat er altijd CSS, JS en een offline page geserved kunnen worden aan de gebruiker, ook als hij/zij offline is. Ook cached hij eerder bezochte pagina's waardoor deze later weer bezocht kunnen worden. Een downside is dat de images die worden niet gecached omdat deze middels een API worden ingeladen. 
 
-## Client side vs Server side
+## Client side vs Server side <a name="#paragraph1"></a>
 Ik heb voor deze app enkel server side rendering gebruikt. Wanneer een app server side rendering gebruikt wordt alle dynamische content op de server gerenderd. Dit kan vervolgens als html naar de client gestuurd worden. SSR kan de gebruikerservaring verbeteren door de snelheid van de pagina's te verbeteren. Ook kan het voor oudere apparaten voordelig werken omdat de content al gerenderd is op de server en dus niet client side gebeurt.
 
 Er zijn twee belangrijke metrics die gebruikt woredn om dew laadsnelheid van een pagina te meten:
@@ -41,12 +32,12 @@ Aan de andere kant moet bij CSR de browser de pagina-inhoud dynamisch genereren 
 In het algemeen is SSR beter voor de prestaties van FCP en LCP, omdat het de laadtijd van de pagina verkort en ervoor zorgt dat de inhoud van de pagina volledig wordt gerenderd voordat deze aan de gebruiker wordt getoond.
 
 <!-- ...and an activity diagram including the Service Worker 📈 -->
-## Activity Diagram
+## Activity Diagram <a name="#paragraph2"></a>
 ![Frame 4 (4)](https://user-images.githubusercontent.com/76910947/229812131-855d2775-3635-4aa3-946c-2a1d9826f2bb.png)
 
 
 <!-- This would be a good place for a list of enhancements to optimize the critical render path implemented your app  -->
-## Critical Rendering Path
+## Critical Rendering Path <a name="#paragraph3"></a>
 
 ### Compression
 De npm package 'compression' is een package voor het comprimeren van HTTP responses in Node.js. Het kan worden gebruikt als middleware in Express.js en andere Node.js frameworks om de grootte van de HTTP response te verminderen en de laadtijd van webpagina's te verkorten.
@@ -112,15 +103,30 @@ Minify:
 npm run prod
 ```
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
 <!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
 ## Sources
-https://medium.com/@daveshreenu/the-benefits-of-server-side-rendering-over-client-side-rendering-5d55a435ff1d"
-https://blog.cloudflare.com/client-side-vs-server-side-rendering-why-its-not-all-black-and-white/
-https://web.dev/lcp/"
-https://web.dev/first-contentful-paint/
+* https://medium.com/@daveshreenu/the-benefits-of-server-side-rendering-over-client-side-rendering-5d55a435ff1d"
+* https://blog.cloudflare.com/client-side-vs-server-side-rendering-why-its-not-all-black-and-white/
+* https://web.dev/lcp/"
+* https://web.dev/first-contentful-paint/
 
 <!-- How about a section that describes how to install this project? 🤓 -->
+## How to install
+
+1. Clone this repository
+2. Get your own API key at the https://data.rijksmuseum.nl/ website. Found under advanced settings
+3. Change the API key to your API key
+4. Run npm install
+5. Run node index.js to start the app
+
+## Checklist
+- [x] Search
+- [x] Alles server side
+- [x] Detail page
+- [x] Service worker
+- [ ] Volgende pagina optie
+
 
 <!-- How about a license here? When in doubt use GNU GPL v3. 📜  -->
+## License
+There is a license availible here in the repository
