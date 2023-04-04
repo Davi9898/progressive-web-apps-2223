@@ -112,6 +112,12 @@ aObject.webImage.url = aObject.webImage.url.slice(0, -1) + "300"
 ```html
 loading="lazy"
 ```
+## Lighthouse
+PWA
+![LighthousePWA](https://user-images.githubusercontent.com/76910947/229846489-0695e970-8bc4-4a5b-b33f-ced753e2e60a.png)
+SPA
+![Spalighthouse](https://user-images.githubusercontent.com/76910947/229847369-51d9d6e8-5c1d-418d-93af-b19f32a3f343.png)
+
 <!-- How about a section that describes how to install this project? 🤓 -->
 ## How to install<a name="#paragraph4"></a>
 
