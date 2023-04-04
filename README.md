@@ -102,6 +102,15 @@ mix.after((stats) => {
   fs.copy("./src/static",  "./dist", () => {});
 });
 ```
+Wanneer de volgende commands gedaan worden:
+Transpiling:
+```
+npx mix watch
+```
+Minify:
+```
+npm run prod
+```
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
