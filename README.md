@@ -105,7 +105,13 @@ Minify:
 ```
 npm run prod
 ```
-
+### Slice en lazy loading
+```js
+aObject.webImage.url = aObject.webImage.url.slice(0, -1) + "300"
+```
+```html
+loading="lazy"
+```
 <!-- How about a section that describes how to install this project? 🤓 -->
 ## How to install<a name="#paragraph4"></a>
 
