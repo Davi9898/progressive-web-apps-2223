@@ -145,4 +145,4 @@ SPA
 
 <!-- How about a license here? When in doubt use GNU GPL v3. 📜  -->
 ## License
-There is a license availible here in the repository
+There is a license available here in the repository
