@@ -13,6 +13,9 @@ https://progressive-web-apps-2223-davi9898.onrender.com/kunstobject/SK-C-251
 2. [Client side vs Server side](#paragraph1)
 3. [Activity Diagram](#paragraph2)
 4. [Critical Rendering Path](#paragraph3)
+5. [How to install](#paragraph4)
+6. [Checklist](#paragraph5)
+7. [Sources](#paragraph6)
 
 <!-- ☝️ replace this description with a description of your own work -->
 ## Omschrijving <a name="introduction"></a>
@@ -103,16 +106,8 @@ Minify:
 npm run prod
 ```
 
-<!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
-## Sources
-* https://medium.com/@daveshreenu/the-benefits-of-server-side-rendering-over-client-side-rendering-5d55a435ff1d"
-* https://blog.cloudflare.com/client-side-vs-server-side-rendering-why-its-not-all-black-and-white/
-* https://web.dev/lcp/"
-* https://web.dev/first-contentful-paint/
-* https://laravel-mix.com/
-
 <!-- How about a section that describes how to install this project? 🤓 -->
-## How to install
+## How to install<a name="#paragraph4"></a>
 
 1. Clone this repository
 2. Get your own API key at the https://data.rijksmuseum.nl/ website. Found under advanced settings
@@ -120,7 +115,7 @@ npm run prod
 4. Run npm install
 5. Run node index.js to start the app
 
-## Checklist
+## Checklist <a name="#paragraph5"></a>
 - [x] Search
 - [x] Alles server side
 - [x] Detail page
@@ -128,6 +123,13 @@ npm run prod
 - [ ] Volgende pagina optie
 - [ ] Foutmelding detail fetch 
 
+<!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
+## Sources <a name="#paragraph6"></a>
+* https://medium.com/@daveshreenu/the-benefits-of-server-side-rendering-over-client-side-rendering-5d55a435ff1d"
+* https://blog.cloudflare.com/client-side-vs-server-side-rendering-why-its-not-all-black-and-white/
+* https://web.dev/lcp/"
+* https://web.dev/first-contentful-paint/
+* https://laravel-mix.com/
 
 <!-- How about a license here? When in doubt use GNU GPL v3. 📜  -->
 ## License
