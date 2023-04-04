@@ -96,10 +96,10 @@ mix.after((stats) => {
   fs.copy("./src/static",  "./dist", () => {});
 });
 ```
-Wanneer de volgende commands gedaan worden:
-Transpiling:
+Wanneer de volgende commands gedaan worden
+Transpiling met babel en kopieren van bestanden naar dist map:
 ```
-npx mix watch
+npm mix watch
 ```
 Minify:
 ```
