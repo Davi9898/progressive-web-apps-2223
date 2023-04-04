@@ -19,10 +19,11 @@ return fetch(url)
         return response.json();
     })
     .then(data => {
-
+        console.log('es')
         //data.artObjects.length <= 1
         // Images filteren die een image hebben en map roept het createListItem aan 
         return data.artObjects.filter(aObject => aObject.hasImage).map(aObject => {
+            aObject.webImage.url = aObject.webImage.url.slice(0, -1) + "300"
             return aObject;
         });
     })

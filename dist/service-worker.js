@@ -1,1 +1,71 @@
-(()=>{"use strict";var e="cache-v2",n="runtime-cache",t=["/offline","/css/styles.css","/js/script.js"];self.addEventListener("install",(function(n){n.waitUntil(caches.open(e).then((function(e){return e.addAll(t)})).then((function(){return self.skipWaiting()})))})),self.addEventListener("activate",(function(t){t.waitUntil(caches.keys().then((function(t){return Promise.all(t.map((function(t){if(t!==e&&t!==n)return caches.delete(t)})))})))})),self.addEventListener("fetch",(function(c){var r=new URL(c.request.url).pathname;c.request.headers.get("accept").includes("text/html")?c.respondWith(caches.open(n).then((function(e){return e.match(c.request)})).then((function(e){return e||(t=c.request,fetch(t).then((function(e){var c=e.clone();return caches.open(n).then((function(e){return e.put(t,c)})),e})));var t})).catch((function(){return caches.open(e).then((function(e){return e.match("/offline")}))}))):t.includes(r)&&c.respondWith(caches.open(e).then((function(e){return e.match(r)})))}))})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+/*!*******************************!*\
+  !*** ./src/service-worker.js ***!
+  \*******************************/
+__webpack_require__.r(__webpack_exports__);
+var CORE_CACHE_NAME = 'cache-v2';
+var RUNTIME_CACHE_NAME = 'runtime-cache';
+var CORE_ASSETS = ['/offline', '/css/styles.css', '/js/script.js'];
+self.addEventListener("install", function (event) {
+  event.waitUntil(caches.open(CORE_CACHE_NAME).then(function (cache) {
+    return cache.addAll(CORE_ASSETS);
+  }).then(function () {
+    return self.skipWaiting();
+  }));
+});
+self.addEventListener('activate', function (event) {
+  event.waitUntil(caches.keys().then(function (cacheNames) {
+    return Promise.all(cacheNames.map(function (cacheName) {
+      if (cacheName !== CORE_CACHE_NAME && cacheName !== RUNTIME_CACHE_NAME) {
+        return caches["delete"](cacheName);
+      }
+    }));
+  }));
+});
+self.addEventListener('fetch', function (event) {
+  var path = new URL(event.request.url).pathname;
+  if (event.request.headers.get('accept').includes('text/html')) {
+    event.respondWith(caches.open(RUNTIME_CACHE_NAME).then(function (cache) {
+      return cache.match(event.request);
+    }).then(function (response) {
+      return response || fetchAndCache(event.request);
+    })["catch"](function () {
+      return caches.open(CORE_CACHE_NAME).then(function (cache) {
+        return cache.match('/offline');
+      });
+    }));
+  } else if (CORE_ASSETS.includes(path)) {
+    event.respondWith(caches.open(CORE_CACHE_NAME).then(function (cache) {
+      return cache.match(path);
+    }));
+  }
+});
+function fetchAndCache(request) {
+  return fetch(request).then(function (response) {
+    var clone = response.clone();
+    caches.open(RUNTIME_CACHE_NAME).then(function (cache) {
+      return cache.put(request, clone);
+    });
+    return response;
+  });
+}
+/******/ })()
+;

@@ -9,7 +9,7 @@
       <h3>{{this.title}}</h3>
       <a href="/kunstobject/{{ this.objectNumber}}">
         <div href="/kunstobject/{{ this.objectNumber}}" class="kunstobject__image">
-          <img src="{{ this.webImage.url }}" alt="">
+          <img loading="lazy" src="{{ this.webImage.url }}" alt="">
         </div>
       </a>
     </li>
