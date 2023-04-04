@@ -41,6 +41,10 @@ Aan de andere kant moet bij CSR de browser de pagina-inhoud dynamisch genereren 
 In het algemeen is SSR beter voor de prestaties van FCP en LCP, omdat het de laadtijd van de pagina verkort en ervoor zorgt dat de inhoud van de pagina volledig wordt gerenderd voordat deze aan de gebruiker wordt getoond.
 
 <!-- ...and an activity diagram including the Service Worker 📈 -->
+## Activity Diagram
+
+![Frame 4 (3)](https://user-images.githubusercontent.com/76910947/229811832-990ab857-df23-413c-b1c6-41447de7d74c.png)
+
 
 <!-- This would be a good place for a list of enhancements to optimize the critical render path implemented your app  -->
 
