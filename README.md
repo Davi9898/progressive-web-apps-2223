@@ -126,6 +126,7 @@ npm run prod
 - [x] Detail page
 - [x] Service worker
 - [ ] Volgende pagina optie
+- [ ] Foutmelding detail fetch 
 
 
 <!-- How about a license here? When in doubt use GNU GPL v3. 📜  -->
