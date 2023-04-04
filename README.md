@@ -35,12 +35,12 @@ Aan de andere kant moet bij CSR de browser de pagina-inhoud dynamisch genereren 
 In het algemeen is SSR beter voor de prestaties van FCP en LCP, omdat het de laadtijd van de pagina verkort en ervoor zorgt dat de inhoud van de pagina volledig wordt gerenderd voordat deze aan de gebruiker wordt getoond.
 
 <!-- ...and an activity diagram including the Service Worker 📈 -->
-## Activity Diagram <a name="#paragraph2"></a>
+## Activity Diagram <a name="#paragraph1"></a>
 ![Frame 4 (4)](https://user-images.githubusercontent.com/76910947/229812131-855d2775-3635-4aa3-946c-2a1d9826f2bb.png)
 
 
 <!-- This would be a good place for a list of enhancements to optimize the critical render path implemented your app  -->
-## Critical Rendering Path <a name="#paragraph3"></a>
+## Critical Rendering Path <a name="#paragraph2"></a>
 
 ### Compression
 De npm package 'compression' is een package voor het comprimeren van HTTP responses in Node.js. Het kan worden gebruikt als middleware in Express.js en andere Node.js frameworks om de grootte van de HTTP response te verminderen en de laadtijd van webpagina's te verkorten.
@@ -119,7 +119,7 @@ SPA
 ![Spalighthouse](https://user-images.githubusercontent.com/76910947/229847369-51d9d6e8-5c1d-418d-93af-b19f32a3f343.png)
 
 <!-- How about a section that describes how to install this project? 🤓 -->
-## How to install<a name="#paragraph4"></a>
+## How to install<a name="#paragraph3"></a>
 
 1. Clone this repository
 2. Get your own API key at the https://data.rijksmuseum.nl/ website. Found under advanced settings
@@ -127,7 +127,7 @@ SPA
 4. Run npm install
 5. Run node index.js to start the app
 
-## Checklist <a name="#paragraph5"></a>
+## Checklist <a name="#paragraph4"></a>
 - [x] Search
 - [x] Alles server side
 - [x] Detail page
@@ -136,7 +136,7 @@ SPA
 - [ ] Foutmelding detail fetch 
 
 <!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
-## Sources <a name="#paragraph6"></a>
+## Sources <a name="#paragraph5"></a>
 * https://medium.com/@daveshreenu/the-benefits-of-server-side-rendering-over-client-side-rendering-5d55a435ff1d"
 * https://blog.cloudflare.com/client-side-vs-server-side-rendering-why-its-not-all-black-and-white/
 * https://web.dev/lcp/"
