@@ -21,7 +21,7 @@ https://progressive-web-apps-2223-davi9898.onrender.com/
 ## Omschrijving <a name="introduction"></a>
 De kunstzoeker is een progressive web app waarin er gezocht kan worden naar verschillende kunstobjecten doormiddel van een search query. Ook kan er worden geklikt op een kunstobject zodat er een detail pagina te voor weergegeven wordt. Hier kan de gebruiker meer informatie over het kunstobject op doen. Ook worden er core_assets opgeslagen in de cache zodat er altijd CSS, JS en een offline page geserved kunnen worden aan de gebruiker, ook als hij/zij offline is. Ook cached hij eerder bezochte pagina's waardoor deze later weer bezocht kunnen worden. Een downside is dat de images die worden niet gecached omdat deze middels een API worden ingeladen. 
 
-## Client side vs Server side <a name="#paragraph1"></a>
+## Client side vs Server side <a name="paragraph1"></a>
 Ik heb voor deze app enkel server side rendering gebruikt. Wanneer een app server side rendering gebruikt wordt alle dynamische content op de server gerenderd. Dit kan vervolgens als html naar de client gestuurd worden. SSR kan de gebruikerservaring verbeteren door de snelheid van de pagina's te verbeteren. Ook kan het voor oudere apparaten voordelig werken omdat de content al gerenderd is op de server en dus niet client side gebeurt.
 
 Er zijn twee belangrijke metrics die gebruikt woredn om dew laadsnelheid van een pagina te meten:
@@ -35,12 +35,12 @@ Aan de andere kant moet bij CSR de browser de pagina-inhoud dynamisch genereren 
 In het algemeen is SSR beter voor de prestaties van FCP en LCP, omdat het de laadtijd van de pagina verkort en ervoor zorgt dat de inhoud van de pagina volledig wordt gerenderd voordat deze aan de gebruiker wordt getoond.
 
 <!-- ...and an activity diagram including the Service Worker 📈 -->
-## Activity Diagram <a name="#paragraph2"></a>
+## Activity Diagram <a name="paragraph2"></a>
 ![Frame 4 (4)](https://user-images.githubusercontent.com/76910947/229812131-855d2775-3635-4aa3-946c-2a1d9826f2bb.png)
 
 
 <!-- This would be a good place for a list of enhancements to optimize the critical render path implemented your app  -->
-## Critical Rendering Path <a name="#paragraph3"></a>
+## Critical Rendering Path <a name="paragraph3"></a>
 
 ### Compression
 De npm package 'compression' is een package voor het comprimeren van HTTP responses in Node.js. Het kan worden gebruikt als middleware in Express.js en andere Node.js frameworks om de grootte van de HTTP response te verminderen en de laadtijd van webpagina's te verkorten.
@@ -119,7 +119,7 @@ SPA
 ![Spalighthouse](https://user-images.githubusercontent.com/76910947/229847369-51d9d6e8-5c1d-418d-93af-b19f32a3f343.png)
 
 <!-- How about a section that describes how to install this project? 🤓 -->
-## How to install<a name="#paragraph4"></a>
+## How to install<a name="paragraph4"></a>
 
 1. Clone this repository
 2. Get your own API key at the https://data.rijksmuseum.nl/ website. Found under advanced settings
@@ -127,7 +127,7 @@ SPA
 4. Run npm install
 5. Run node index.js to start the app
 
-## Checklist <a name="#paragraph5"></a>
+## Checklist <a name="paragraph5"></a>
 - [x] Search
 - [x] Alles server side
 - [x] Detail page
@@ -136,7 +136,7 @@ SPA
 - [ ] Foutmelding detail fetch 
 
 <!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
-## Sources <a name="#paragraph6"></a>
+## Sources <a name="paragraph6"></a>
 * https://medium.com/@daveshreenu/the-benefits-of-server-side-rendering-over-client-side-rendering-5d55a435ff1d"
 * https://blog.cloudflare.com/client-side-vs-server-side-rendering-why-its-not-all-black-and-white/
 * https://web.dev/lcp/"
