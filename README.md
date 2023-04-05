@@ -5,7 +5,7 @@
 ## Inleiding
 Voor dit vak zijn we bezig gegaan om onze Single page application om te bouwen naar een progressive web app. Dit hebben we gedaan om te leren over moderne webtechnologieën. Een progessive web app kan sneller en beter zijn voor gebruikers. Ook kunnen PWA's offline worden gebruikt en zelf geïnstalleerd worden op je device. Een PWA biedt dus functies als: offline caching, push-notificaties en toegang hardware functies van je apparaat. Je zou kunnen zeggen dat dit een wat meer geadvanceerdere versie is van een SPA. Goed voor ons om mee aan de slag te gaan.
 
-https://progressive-web-apps-2223-davi9898.onrender.com/kunstobject/SK-C-251
+https://progressive-web-apps-2223-davi9898.onrender.com/
 
 
 # Table of contents
